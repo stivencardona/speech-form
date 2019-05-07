@@ -1,6 +1,7 @@
 let inputGlobal = "box";
 let recAvaible = false;
 let codAvaible = false;
+let csvFile = [];
 
 // mapping and description of values of input fields and nextid to auto focus
 let nextId = {
@@ -128,25 +129,29 @@ function setId(id) {
 // function that crete a new link for the download of csv file
 
 function downloadCSV(csv, filename) {
-  let csvFile;
-  let downloadLink = document.getElementById("download-csv");
-  csvFile = new Blob([csv], { type: "text/csv" });
-  downloadLink.href = window.URL.createObjectURL(csvFile);
+  let csvFileToDownload;
+  let downloadLink = document.createElement("a");
+  csvFileToDownload = new Blob([csv], { type: "text/csv" });
+  downloadLink.href = window.URL.createObjectURL(csvFileToDownload);
   downloadLink.download = filename;
+  downloadLink.click();
 }
 
 // function that convert the fields of form in a csv file
-
-function exportHtmlToCSV(filename) {
-  let csv = [];
+function headerFields() {
   let names = document.getElementsByClassName("name-field");
+  let fields = [];
+  for (let i = 0; i < names.length; i++) fields.push(names[i].textContent);
+  csvFile.push(fields.join(","));
+}
+
+headerFields();
+
+function exportHtmlToCSV() {
+  let row = [];
   let values = document.getElementsByClassName("value-field");
-  csv.push("CAMPO,INFO");
-  for (let i = 0; i < names.length; i++) {
-    let rowNames = [names[i].textContent, values[i].value];
-    csv.push(rowNames.join(","));
-  }
-  downloadCSV(csv.join("\n"), filename);
+  for (let i = 0; i < values.length; i++) row.push(values[i].value);
+  csvFile.push(row.join(","));
 }
 
 function turnOnRec() {

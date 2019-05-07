@@ -27,6 +27,7 @@ let commands = {
   nuevo: function() {
     let erase = confirm("¿Desea eliminar todos los campos?");
     if (erase) {
+      exportHtmlToCSV();
       formValues.forEach(e => {
         document.getElementById(e.id).value = "";
       });
@@ -50,7 +51,9 @@ let commands = {
     turnOffRec();
   },
   descargar: function() {
-    document.getElementById("download-csv").click();
+    if (recAvaible) downloadCSV(csvFile.join("\n"), "memory-corp.csv");
+    recAvaible = false;
+    turnOffRec();
   }
 };
 
