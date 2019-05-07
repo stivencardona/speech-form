@@ -148,3 +148,39 @@ function exportHtmlToCSV(filename) {
   }
   downloadCSV(csv.join("\n"), filename);
 }
+
+function turnOnRec() {
+  let label = document.getElementById("rec");
+  let icon = document.getElementById("icon-rec");
+  icon.textContent = "mic";
+  let classContent =
+    "record btn-floating btn-large waves-effect waves-light red";
+  label.className = classContent;
+}
+
+function turnOffRec() {
+  let label = document.getElementById("rec");
+  let icon = document.getElementById("icon-rec");
+  icon.textContent = "mic_off";
+  let classContent =
+    "record btn-floating btn-large waves-effect waves-light grey";
+  label.className = classContent;
+}
+
+function turnOnCode() {
+  let label = document.getElementById("code");
+  let icon = document.getElementById("icon-code");
+  icon.textContent = "link";
+  let classContent =
+    "record btn-floating btn-large waves-effect waves-light red";
+  label.className = classContent;
+}
+
+function turnOffCode() {
+  let label = document.getElementById("code");
+  let icon = document.getElementById("icon-code");
+  icon.textContent = "link_off";
+  let classContent =
+    "record btn-floating btn-large waves-effect waves-light grey";
+  label.className = classContent;
+}

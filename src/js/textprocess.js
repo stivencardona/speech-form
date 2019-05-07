@@ -2,10 +2,14 @@ let commands = {
   siguiente: function() {
     inputGlobal = nextId[inputGlobal];
     document.getElementById(inputGlobal).focus();
+    codAvaible = false;
+    turnOffCode();
   },
   anterior: function() {
     inputGlobal = previousId[inputGlobal];
     document.getElementById(inputGlobal).focus();
+    codAvaible = false;
+    turnOffCode();
   },
   eliminar: function() {
     if (recAvaible) document.getElementById(inputGlobal).value = "";
@@ -18,6 +22,7 @@ let commands = {
   },
   grabar: function() {
     recAvaible = true;
+    turnOnRec();
   },
   nuevo: function() {
     let erase = confirm("¿Desea eliminar todos los campos?");
@@ -28,16 +33,21 @@ let commands = {
       document.getElementById("box").focus();
       inputGlobal = "box";
       recAvaible = false;
+      turnOffRec();
+      turnOffCode();
     }
   },
   codigo: function() {
     codAvaible = true;
+    turnOnCode();
   },
   normal: function() {
     codAvaible = false;
+    turnOffCode();
   },
   pausa: function() {
     recAvaible = false;
+    turnOffRec();
   },
   descargar: function() {
     document.getElementById("download-csv").click();
