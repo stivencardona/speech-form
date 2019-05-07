@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- New Stiven -->
+    <link
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+      rel="stylesheet"
+    />
+    <link href="src/css/main.css" rel="stylesheet" />
+    <link href="src/css/app.css" rel="stylesheet" />
+    <title>SpeechForm</title>
+  </head>
+  <body>
+    <div>
+      <header
+        class="mdl-layout__header mdl-layout__header--waterfall site-header"
+      >
+        <div class="mdl-layout__header-row site-logo-row">
+          <span class="mdl-layout__title">
+            <a href="#" class="brand-logo">
+              <img src="src/assets/images/dintelligent.png" alt="" />
+            </a>
+            <span class="site-description" styles="font-size: 20px"
+              >Speech Form</span
+            >
+          </span>
+        </div>
+        <!-- <div
+          class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only"
+        ></div> -->
+      </header>
+      <br />
+
+      <div class="container white z-depth-2">
+        <br />
+        <div class="row">
+          <form id="render" action="" class="col s12"></form>
+        </div>
+        <div class="fixed-action-btn">
+          <a
+            id="rec"
+            class="record btn-floating btn-large waves-effect waves-light red"
+          >
+            <i id="icon" class="material-icons">mic</i>
+          </a>
+          <a
+            id="download-csv"
+            class="record btn-floating btn-large waves-effect waves-light red"
+            onclick="exportHtmlToCSV('test-memory-corp.csv')"
+          >
+            <i id="icon" class="material-icons">cloud_download</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- New Stiven -->
+    <script src="src/js/textprocess.js"></script>
+    <script src="src/js/utils.js"></script>
+    <script src="src/js/speech.js"></script>
+  </body>
+</html>

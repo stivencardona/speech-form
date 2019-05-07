@@ -1,0 +1,63 @@
+/*
+.main-controls {
+  padding: 1.5rem 0;
+}
+*/
+
+/* Make the clips use as much space as possible, and
+ * also show a scrollbar when there are too many clips to show
+ * in the available space */
+.site-logo {
+  background: url(../assets/images/dintelligent.png) 50% no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  margin: 15px auto;
+}
+
+.sound-clips {
+  flex: 1;
+  overflow: auto;
+}
+
+.clip {
+  padding-bottom: 1rem;
+}
+
+.clip p {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.clip button {
+  font-size: 1rem;
+  float: right;
+}
+
+button.delete {
+  background: #f00;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+#buttons_form .record,
+#buttons_form .stop {
+  font-size: 1rem;
+  background: #0088cc;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem;
+}
+
+.name-field {
+  color: black;
+  font-size: 14px;
+}
+
+/* Cursor when clip name is clicked over */
+
+.clip p {
+  cursor: pointer;
+}
