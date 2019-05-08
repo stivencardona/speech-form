@@ -82,6 +82,11 @@ let formValues = [
   { id: "setname", name: "SETNAME", propierties: [] }
 ];
 
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".tooltipped");
+  var instances = M.Tooltip.init(elems);
+});
+
 let render = document.getElementById("render");
 
 // render inputs and labels of form
