@@ -51,7 +51,8 @@ let commands = {
     turnOffRec();
   },
   descargar: function() {
-    if (recAvaible) downloadCSV(csvFile.join("\n"), "memory-corp.csv");
+    exportHtmlToCSV();
+    downloadCSV(csvFile.join("\n"), "memory-corp.csv");
     recAvaible = false;
     turnOffRec();
   }

@@ -151,7 +151,11 @@ function exportHtmlToCSV() {
   let row = [];
   let values = document.getElementsByClassName("value-field");
   for (let i = 0; i < values.length; i++) row.push(values[i].value);
-  csvFile.push(row.join(","));
+  let state = true;
+  csvFile.forEach(e => {
+    state = state && e != row.join(",");
+  });
+  if (state) csvFile.push(row.join(","));
 }
 
 function turnOnRec() {
