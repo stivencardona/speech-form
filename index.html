@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!--Import Google Icon Font-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en"
-      rel="stylesheet"
-    />
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <!-- New Stiven -->
-    <link
-      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
-      rel="stylesheet"
-    />
-    <link href="src/css/main.css" rel="stylesheet" />
-    <link href="src/css/app.css" rel="stylesheet" />
-    <title>SpeechForm</title>
-  </head>
-  <body>
-    <div>
-      <header
-        class="mdl-layout__header mdl-layout__header--waterfall site-header"
-      >
-        <div class="mdl-layout__header-row site-logo-row">
-          <span class="mdl-layout__title">
-            <a href="#" class="brand-logo">
-              <img src="src/assets/images/dintelligent.png" alt="" />
-            </a>
-            <span class="site-description" styles="font-size: 20px"
-              >Speech Form</span
-            >
-          </span>
-        </div>
-        <!-- <div
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!--Import Google Icon Font-->
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en"
+			rel="stylesheet"
+		/>
+		<!-- Compiled and minified CSS -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<!-- New Stiven -->
+		<link
+			href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+			rel="stylesheet"
+		/>
+		<link href="src/css/main.css" rel="stylesheet" />
+		<link href="src/css/app.css" rel="stylesheet" />
+		<title>SpeechForm</title>
+	</head>
+	<body>
+		<div>
+			<header
+				class="mdl-layout__header mdl-layout__header--waterfall site-header"
+			>
+				<div class="mdl-layout__header-row site-logo-row">
+					<span class="mdl-layout__title">
+						<a href="#" class="brand-logo">
+							<img src="src/assets/images/dintelligent.png" alt="" />
+						</a>
+						<span class="site-description" styles="font-size: 20px"
+							>Speech Form</span
+						>
+					</span>
+				</div>
+				<!-- <div
           class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only"
         ></div> -->
-      </header>
-      <br />
-      <div class="row">
-        <div class="col s1"></div>
-        <div class="col container white z-depth-2 s7">
-          <br />
-          <div class="row">
-            <form id="render" action="" class="col s12"></form>
-          </div>
-          <!-- <a
+			</header>
+			<br />
+			<div class="row">
+				<div class="col s1"></div>
+				<div class="col container white z-depth-2 l7 s10">
+					<br />
+					<div class="row">
+						<form id="render" action="" class="col s12"></form>
+					</div>
+					<!-- <a
             class="btn tooltipped btn-floating btn-large fixed-action-btn"
             style="left: 20px;"
             data-position="top"
@@ -73,71 +73,71 @@
           "
             ><i id="icon-rec" class="material-icons">help</i></a
           > -->
-          <div id="download-field" class="fixed-action-btn">
-            <a
-              id="rec"
-              class="record btn-floating btn-large waves-effect waves-light grey"
-            >
-              <i id="icon-rec" class="material-icons">mic_off</i>
-            </a>
-            <a
-              id="code"
-              class="record btn-floating btn-large waves-effect waves-light grey"
-            >
-              <i id="icon-code" class="material-icons">link</i>
-            </a>
-          </div>
-        </div>
-        <div class="col s4">
-          <div class="container white z-depth-2 s12">
-            <div class="row">
-              <div class="col s1"></div>
-              <div class="col s10">
-                <center>
-                  <h3>Comandos de voz</h3>
-                </center>
-                <p>
-                  <b>Grabar:</b> para iniciar a capturar la información, notara
-                  además que una señal se pondra de color rojo en la parte
-                  inferior derecha
-                </p>
-                <p>
-                  <b>Pausa:</b> para detener la captura de la información,
-                  notara además que una señal se pondra de color gris en la
-                  parte inferior derecha
-                </p>
-                <p><b>Siguiente:</b> para pasar al campo siguiente</p>
-                <p><b>Anterior:</b> para pasar al campo anterior</p>
-                <p>
-                  <b>Corregir:</b> para eliminar la ultima palabra que se dijo
-                </p>
-                <p>
-                  <b>Código:</b> para entrar al modo código, notara además que
-                  una señal se pondra de color rojo en la parte inferior derecha
-                </p>
-                <p>
-                  <b>Normal:</b> para detener el modo código, notara además que
-                  una señal se pondra de color gris en la parte inferior derecha
-                </p>
-                <p><b>Eliminar:</b> para limpiar un campo del formulario</p>
-                <p>
-                  <b>Nuevo:</b> para guardar los campos del formulario en el csv
-                  y limpiarlo para recibir nuevos datos
-                </p>
-                <p>
-                  <b>Descargar:</b> para descargar el formulario en formato csv
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- New Stiven -->
-    <script src="src/js/textprocess.js"></script>
-    <script src="src/js/utils.js"></script>
-    <script src="src/js/speech.js"></script>
-  </body>
+					<div id="download-field" class="fixed-action-btn">
+						<a
+							id="rec"
+							class="record btn-floating btn-large waves-effect waves-light grey"
+						>
+							<i id="icon-rec" class="material-icons">mic_off</i>
+						</a>
+						<a
+							id="code"
+							class="record btn-floating btn-large waves-effect waves-light grey"
+						>
+							<i id="icon-code" class="material-icons">link</i>
+						</a>
+					</div>
+				</div>
+				<div class="col l4">
+					<div class="container white z-depth-2 s12 hide-on-med-and-down">
+						<div class="row">
+							<div class="col s1"></div>
+							<div class="col s10">
+								<center>
+									<h3>Comandos de voz</h3>
+								</center>
+								<p>
+									<b>Grabar:</b> para iniciar a capturar la información, notara
+									además que una señal se pondra de color rojo en la parte
+									inferior derecha
+								</p>
+								<p>
+									<b>Pausa:</b> para detener la captura de la información,
+									notara además que una señal se pondra de color gris en la
+									parte inferior derecha
+								</p>
+								<p><b>Siguiente:</b> para pasar al campo siguiente</p>
+								<p><b>Anterior:</b> para pasar al campo anterior</p>
+								<p>
+									<b>Corregir:</b> para eliminar la ultima palabra que se dijo
+								</p>
+								<p>
+									<b>Código:</b> para entrar al modo código, notara además que
+									una señal se pondra de color rojo en la parte inferior derecha
+								</p>
+								<p>
+									<b>Normal:</b> para detener el modo código, notara además que
+									una señal se pondra de color gris en la parte inferior derecha
+								</p>
+								<p><b>Eliminar:</b> para limpiar un campo del formulario</p>
+								<p>
+									<b>Nuevo:</b> para guardar los campos del formulario en el csv
+									y limpiarlo para recibir nuevos datos
+								</p>
+								<p>
+									<b>Descargar:</b> para descargar el formulario en formato csv
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<!-- New Stiven -->
+		<script src="src/js/textprocess.js"></script>
+		<script src="src/js/utils.js"></script>
+		<script src="src/js/speech.js"></script>
+	</body>
 </html>
