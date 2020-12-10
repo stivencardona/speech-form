@@ -52,7 +52,7 @@ let commands = {
   },
   descargar: function() {
     exportHtmlToCSV();
-    downloadCSV(csvFile.join("\n"), "memory-corp.csv");
+    downloadCSV(csvFile.join("\n"), "ingesoft-iii.csv");
     recAvaible = false;
     turnOffRec();
   }
